@@ -32,6 +32,12 @@ public class MainApp {
             System.out.println();
         }
 
+        User findUser = userService.getUserByCar("model3", 3);
+        System.out.println(findUser.getFirstName());
+
+        User findNoExistUser = userService.getUserByCar("NoExist", 712435245);
+        System.out.println(findNoExistUser);
+
         context.close();
     }
 }
